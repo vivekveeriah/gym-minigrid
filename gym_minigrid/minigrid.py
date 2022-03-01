@@ -1175,7 +1175,7 @@ class MiniGridEnv(gym.Env):
         # grid = self.grid.slice(topX, topY, self.agent_view_size, self.agent_view_size)
         
         # To see if we can get only the agent's direction
-        grid = self.grid.slice(topX, topY, 1, self.agent_view_size)
+        grid = self.grid.slice(topX, topY, 3, 3)
 
         for i in range(self.agent_dir + 1):
             grid = grid.rotate_left()
